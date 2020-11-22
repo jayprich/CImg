@@ -1,0 +1,20 @@
+# clang
+# libpng12-dev
+# libjpeg-dev
+# libmagick++-dev
+# libgraphicsmagick++1-dev
+# libfftw3-dev
+# zlib1g-dev
+
+steps:
+- name: 'ubuntu'
+    dir: 'examples'
+    entrypoint: make
+    args: travis
+    env:
+    - 'CXX=g++-4.8'
+
+artifacts:
+  objects:
+    location: 'gs://jayprich-cloud-build-artifacts/cimg/'
+    paths: CImg/examples/image2ascii
