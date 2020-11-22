@@ -1,3 +1,4 @@
+
 # clang
 # libpng12-dev
 # libjpeg-dev
@@ -9,8 +10,8 @@
 steps:
 - name: 'ubuntu'
     dir: 'examples'
-    entrypoint: make
-    args: travis
+    entrypoint: 'make'
+    args: ['make', 'image2ascii']
     env:
     - 'CXX=g++-4.8'
 
